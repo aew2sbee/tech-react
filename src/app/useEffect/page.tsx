@@ -2,6 +2,7 @@
 
 import styles from "./../page.module.css";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function UseEffectPractice() {
   const [text, setText] = useState("");
@@ -42,6 +43,8 @@ export default function UseEffectPractice() {
             カウント: {count}
           </button>
         </section>
+
+        <Link href="/">Topへ戻る</Link>
         </div>
       </main>
     </div>

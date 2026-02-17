@@ -2,6 +2,7 @@
 
 import styles from "./../page.module.css";
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function UseStatePractice() {
   // 1. 基本：数値のカウント
@@ -53,6 +54,8 @@ export default function UseStatePractice() {
             </div>
           )}
         </section>
+
+        <Link href="/">Topへ戻る</Link>
         </div>
       </main>
     </div>
