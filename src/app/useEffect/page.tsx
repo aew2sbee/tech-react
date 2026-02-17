@@ -1,6 +1,6 @@
 "use client"; // これが必須です！
 
-import styles from "./page.module.css";
+import styles from "./../page.module.css";
 import { useState, useEffect } from 'react';
 
 export default function UseEffectPractice() {

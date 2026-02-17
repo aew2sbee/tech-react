@@ -1,6 +1,6 @@
 "use client"; // クライアントコンポーネントとして宣言
 
-import styles from "./page.module.css";
+import styles from "./../page.module.css";
 import { useState } from 'react';
 
 export default function UseStatePractice() {
