@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import fs from "fs";
 import path from "path";
+import NavLinkList from "./components/NavLinkList"; // Import the new client component
 
 export default function Home() {
   const appDirectory = path.join(process.cwd(), "src/app");
@@ -14,19 +15,18 @@ export default function Home() {
         fs.existsSync(path.join(appDirectory, name, "page.tsx"))
     );
 
+  const navLinks = pageDirectories.map((name) => ({
+    href: `/${name}`,
+    text: `${name} Example`, // I'll use "Example" here for consistency with the new client component
+  }));
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.intro}>
           <h1>Navigation</h1>
           <nav>
-            <ul>
-              {pageDirectories.map((name) => (
-                <li key={name}>
-                  <a href={`/${name}`}>{name} サンプルページ</a>
-                </li>
-              ))}
-            </ul>
+            <NavLinkList links={navLinks} /> {/* Use the client component */}
           </nav>
         </div>
       </main>
