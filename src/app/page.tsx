@@ -16,7 +16,7 @@ export default function Home() {
     );
 
   const navLinks = pageDirectories.map((name) => ({
-    href: `/${name}`,
+    href: `/poc-react/${name}`,
     text: `${name} Example`, // I'll use "Example" here for consistency with the new client component
   }));
 
